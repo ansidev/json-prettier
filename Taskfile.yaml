@@ -1,0 +1,29 @@
+version: '3'
+
+tasks:
+  lint:
+    desc: Lint
+    cmds:
+      - golangci-lint run ./...
+    silent: true
+
+  test:
+    desc: Test
+    cmds:
+      - go test -v .
+    silent: true
+
+  build:
+    desc: Build
+    cmds:
+      - go build -v .
+    silent: true
+
+  ci:
+    desc: Run CI locally
+    cmds:
+      - task: lint
+      - task: test
+      - task: build
+      - echo "Passed!"
+    silent: true
