@@ -1,18 +1,19 @@
-# Pretty
+# JSON Pretty
 
-[![GoDoc](https://img.shields.io/badge/api-reference-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/tidwall/pretty) 
+[![GoDoc](https://img.shields.io/badge/api-reference-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/ansidev/json-pretty)
 
-Pretty is a Go package that provides [fast](#performance) methods for formatting JSON for human readability, or to compact JSON for smaller payloads.
+JSON Pretty is a Go package that provides [fast](#performance) methods for formatting JSON for human readability, or to compact JSON for smaller payloads.
 
-Getting Started
-===============
+JSON Pretty is forked from [tidwall/pretty](https://github.com/tidwall/pretty).
 
-## Installing
+## Getting Started
+
+### Installing
 
 To start using Pretty, install Go and run `go get`:
 
 ```sh
-$ go get -u github.com/tidwall/pretty
+go get -u github.com/tidwall/pretty
 ```
 
 This will retrieve the library.
@@ -55,9 +56,9 @@ Will format the json to:
 }
 ```
 
-## Color
+### Color
 
-Color will colorize the json for outputing to the screen. 
+Color will colorize the json for outputing to the screen.
 
 ```json
 result = pretty.Color(json, nil)
@@ -66,7 +67,7 @@ result = pretty.Color(json, nil)
 Will add color to the result for printing to the terminal.
 The second param is used for a customizing the style, and passing nil will use the default `pretty.TerminalStyle`.
 
-## Ugly
+### Ugly
 
 The following code:
 ```go
@@ -76,7 +77,7 @@ result = pretty.Ugly(example)
 Will format the json to:
 
 ```json
-{"name":{"first":"Tom","last":"Anderson"},"age":37,"children":["Sara","Alex","Jack"],"fav.movie":"Deer Hunter","friends":[{"first":"Janet","last":"Murphy","age":44}]}```
+{"name":{"first":"Tom","last":"Anderson"},"age":37,"children":["Sara","Alex","Jack"],"fav.movie":"Deer Hunter","friends":[{"first":"Janet","last":"Murphy","age":44}]}
 ```
 
 ## Customized output
@@ -99,7 +100,7 @@ type Options struct {
 	SortKeys bool
 }
 ```
-## Performance
+### Performance
 
 Benchmarks of Pretty alongside the builtin `encoding/json` Indent/Compact methods.
 ```
@@ -113,10 +114,10 @@ BenchmarkJSONCompact-16       685111    1699 ns/op    442 B/op     0 allocs/op
 
 *These benchmarks were run on a MacBook Pro 2.4 GHz 8-Core Intel Core i9.*
 
-## Contact
-Josh Baker [@tidwall](http://twitter.com/tidwall)
+### Contact
 
-## License
+Le Minh Tri [@ansidev](https://ansidev.xyz/about).
 
-Pretty source code is available under the MIT [License](/LICENSE).
+### License
 
+JSON Pretty source code is available under the [MIT License](/LICENSE).
