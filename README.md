@@ -18,7 +18,7 @@ go get -u github.com/tidwall/pretty
 
 This will retrieve the library.
 
-## Pretty
+### Pretty
 
 Using this example:
 
@@ -80,7 +80,7 @@ Will format the json to:
 {"name":{"first":"Tom","last":"Anderson"},"age":37,"children":["Sara","Alex","Jack"],"fav.movie":"Deer Hunter","friends":[{"first":"Janet","last":"Murphy","age":44}]}
 ```
 
-## Customized output
+### Customized output
 
 There's a `PrettyOptions(json, opts)` function which allows for customizing the output with the following options:
 
