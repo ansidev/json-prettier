@@ -2,9 +2,16 @@ name: CI@main
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - '.github/workflows/ci_main.yaml'
+      - 'go.mod'
+      - 'pretty.go'
+      - 'pretty_test.go'
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 env:
   GOLANG_CI_LINT_VERSION: v1.47.0
