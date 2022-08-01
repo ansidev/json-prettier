@@ -235,7 +235,7 @@ func parsestr(s []byte) []byte {
 	for i := 1; i < len(s); i++ {
 		if s[i] == '\\' {
 			var str string
-			json.Unmarshal(s, &str)
+			_ = json.Unmarshal(s, &str)
 			return []byte(str)
 		}
 		if s[i] == '"' {

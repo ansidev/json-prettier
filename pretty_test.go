@@ -466,7 +466,7 @@ func BenchmarkJSONIndent(t *testing.B) {
 	t.ReportAllocs()
 	t.ResetTimer()
 	for i := 0; i < t.N; i++ {
-		json.Indent(&dst, example1, "", "  ")
+		_ = json.Indent(&dst, example1, "", "  ")
 	}
 }
 
@@ -475,14 +475,14 @@ func BenchmarkJSONCompact(t *testing.B) {
 	t.ReportAllocs()
 	t.ResetTimer()
 	for i := 0; i < t.N; i++ {
-		json.Compact(&dst, example1)
+		_ = json.Compact(&dst, example1)
 	}
 }
 
 func TestPrettyNoSpaceAfterNewline(t *testing.T) {
 	json := `[{"foo":1,"bar":2},{"foo":3,"bar":4}]`
 	json = string(Pretty([]byte(json)))
-	if strings.Index(json, " \n") != -1 {
+	if strings.Contains(json, " \n") {
 		t.Fatal("found a space followed by a newline, which should not be allowed")
 	}
 }
