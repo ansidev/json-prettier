@@ -1,6 +1,9 @@
 # JSON Pretty
 
-[![GoDoc](https://img.shields.io/badge/api-reference-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/ansidev/json-pretty)
+[![GoDoc](https://pkg.go.dev/badge/github.com/ansidev/json-pretty?status.svg)](https://pkg.go.dev/github.com/ansidev/json-pretty?tab=doc)
+[![Build Status](https://github.com/ansidev/json-pretty/workflows/Main/badge.svg?branch=main)](https://github.com/ansidev/json-pretty/actions?query=branch%3Amain)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ansidev/json-pretty)](https://goreportcard.com/report/github.com/ansidev/json-pretty)
+[![Sourcegraph](https://sourcegraph.com/github.com/ansidev/json-pretty/-/badge.svg)](https://sourcegraph.com/github.com/ansidev/json-pretty?badge)
 
 JSON Pretty is a Go package that provides [fast](#performance) methods for formatting JSON for human readability, or to compact JSON for smaller payloads.
 
